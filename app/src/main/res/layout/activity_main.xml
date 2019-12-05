@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 这是最后整合前面所有布局的布局-->
+
+<!--DrawerLayout抽屉布局，实现侧滑最重要的内容，通过对它的属性进行设置，可以实现侧滑甚至上滑，下滑，都没有问题。-->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <!-- include内部是通过这个布局，
+    我们把标题栏和内容面板以及悬浮按钮集合在一起，
+    但是主界面中除了这些还应该有侧滑栏，
+    那么下一个布局文件我们就将上一个布局和侧滑栏整合在一起，构成主界。-->
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--把是导航视图，就侧滑栏的内容加载进来，其中有两个比较重要德属性，headerLayout,
+        这是导航视图的头布局，也就是前面说明的nav_header_main.xml
+    ，另一个是menu菜单，就是前面讲的activity_main_drawer.xml，OK，界面搭建完毕-->
+    <!-- android:layout_gravity="start" 表示可以从左滑出菜单-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

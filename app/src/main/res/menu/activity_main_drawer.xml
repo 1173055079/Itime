@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!-- 这里是侧滑菜单的菜单项-->
+    <!-- group代表这些菜单项为一组，另一组菜单项会有一条横线分开-->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="计时" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="小部件" />
+        <item
+            android:id="@+id/set_color"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="主题色" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="高级版" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="设置" />
+            <item
+                android:id="@+id/about"
+                android:icon="@android:drawable/ic_dialog_info"
+                android:title="关于" />
+            <item
+                android:id="@+id/help"
+                android:icon="@android:drawable/sym_action_chat"
+                android:title="帮助与反馈" />
+        </menu>
+    </item>
+
+</menu>

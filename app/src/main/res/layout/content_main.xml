@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--外层是一个弹性约束布局，跟相对布局有点儿像，这不是我们的重点，此处不展开说明-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <!-- 这里是DrawerLayout的主视图的显示布局,MainActivity的this来源-->
+    <ListView
+        android:id="@+id/content_list_view"
+        style="@style/Widget.AppCompat.ListView"
+        android:layout_width="398dp"
+        android:layout_height="664dp"
+        android:layout_marginTop="4dp"
+        android:fadingEdgeLength="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

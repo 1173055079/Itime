@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newBuiltActivity">
+
+    <include
+        layout="@layout/toolbar_newbuild"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginRight="-3dp"
+        android:layout_marginBottom="191dp"
+        android:background="#FFFFFF"
+        android:drawableLeft="@drawable/ic_menu_share"
+        android:text="日期\n 长按使用日期计算器" />
+
+    <Button
+        android:id="@+id/cycle_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="136dp"
+        android:background="#FFFFFF"
+        android:drawableLeft="@android:drawable/ic_menu_rotate"
+        android:text="重复设置\n无" />
+
+    <Button
+        android:id="@+id/button_picture_newbuild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="84dp"
+        android:background="#FFFFFF"
+        android:drawableLeft="@android:drawable/ic_menu_crop"
+        android:text="图片" />
+
+    <Button
+        android:id="@+id/label_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="28dp"
+        android:background="#FFFFFF"
+        android:drawableLeft="@android:drawable/sym_action_chat"
+        android:text="添加标签" />
+
+
+</RelativeLayout>
